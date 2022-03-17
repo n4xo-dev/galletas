@@ -5,6 +5,10 @@
 - Servomotor + (otro motor || LCD || 7 segmentos)
 - Código en texto
 
+## Proyecto
+
+https://www.tinkercad.com/things/bjpvBZTOz1T-tremendous-jaiks/editel?sharecode=Lmx51RjPEbWnjzwnxLLI44py3M7ZouCs81AkVVVfLlI
+
 ## Idea de diseño:
 Módulo contador de elementos en cinta transportadora y empaquetador con mando para graceful shutdown.
 
