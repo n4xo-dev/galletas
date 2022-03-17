@@ -22,3 +22,4 @@ Módulo contador de elementos en cinta transportadora y empaquetador con mando p
 
 ### Referencias:
 - Código sónar: https://www.tinkercad.com/things/61LwgY5m6rw-copy-of-sonarledsservo/editel
+- Código sensor infrarrojo:  https://www.tinkercad.com/things/0n2VuaSIEZV 
