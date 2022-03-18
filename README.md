@@ -9,6 +9,10 @@
 
 https://www.tinkercad.com/things/bjpvBZTOz1T-tremendous-jaiks/editel?sharecode=Lmx51RjPEbWnjzwnxLLI44py3M7ZouCs81AkVVVfLlI
 
+## Documento
+
+https://docs.google.com/document/d/1PzNVlugiF-tHXZxervDr2-07EF7CuuOYZ93CyWHH9bI/edit?usp=sharing
+
 ## Idea de diseño:
 Módulo contador de elementos en cinta transportadora y empaquetador con mando para graceful shutdown.
 
