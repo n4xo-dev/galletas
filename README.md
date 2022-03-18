@@ -1,5 +1,5 @@
 # Especificación Práctica 1 SIInd
-## Mínimos:
+## Mínimos
 - Arduino
 - Sónar + sensor
 - Servomotor + (otro motor || LCD || 7 segmentos)
@@ -13,7 +13,7 @@ https://www.tinkercad.com/things/bjpvBZTOz1T-tremendous-jaiks/editel?sharecode=L
 
 https://docs.google.com/document/d/1PzNVlugiF-tHXZxervDr2-07EF7CuuOYZ93CyWHH9bI/edit?usp=sharing
 
-## Idea de diseño:
+## Idea de diseño
 Módulo contador de elementos en cinta transportadora y empaquetador con mando para graceful shutdown.
 
 ### Sónar:
