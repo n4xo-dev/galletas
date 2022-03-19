@@ -76,7 +76,7 @@ void takeCookie()
 }
 
 /*
-	IR MODULE
+    IR MODULE
     Source: https://www.tinkercad.com/things/0n2VuaSIEZV
     Description: Checks if any IR signal has been sent.
 	If the ON/OFF button is detected the state of the system changes.
@@ -97,7 +97,7 @@ void checkIRSignal()
 }
 
 /*
-	7 SEGMENTS MODULE
+    7 SEGMENTS MODULE
     Source: https://www.tinkercad.com/things/lm0lS38Mq42
     Description: Writes the given segments to the output pins.
 */ 
