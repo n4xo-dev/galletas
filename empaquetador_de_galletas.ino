@@ -84,7 +84,7 @@ void takeCookie()
 void checkIRSignal()
 {
   if (irrecv.decode(&results)) {		// Receives button code
-  	Serial.println(results.value, DEC); // Shows code through terminal
+      Serial.println(results.value, DEC); // Shows code through terminal
   	if (results.value == 16580863){		// Check if ON/OFF button was pressed
       isEnabled = !isEnabled;			// System state changes
       display(-1);						// Display E for error
@@ -123,7 +123,7 @@ void seg7(int a, int b, int c, int d, int e, int f, int g)
 void display(int n)
 {
   switch(n){
-  	case 0:
+    case 0:
       seg7(1,1,1,1,1,1,0);
       break;
     case 1:
@@ -171,7 +171,7 @@ void display(int n)
 void counter()
 {
   if (sonarReading < cookieThreshold){
-  	packageCount++;
+    packageCount++;
     display(packageCount);
     Serial.print("Count: ");
     Serial.println(packageCount);
