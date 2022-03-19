@@ -115,7 +115,7 @@ void seg7(int a, int b, int c, int d, int e, int f, int g)
 }
 
 /*
-	DISPLAY MODULE
+    DISPLAY MODULE
     Source: https://www.tinkercad.com/things/lm0lS38Mq42
     Description: Translates number to 7 segments and displays it.
     Inspired from source, not copied.
@@ -161,10 +161,10 @@ void display(int n)
 
 
 /*
-	COUNTER MODULE
+    COUNTER MODULE
     Source: own
     Description: Checks if signal from sonar has detected a cookie.
-	If so, it increases the count of cookies and when it reaches the
+    If so, it increases the count of cookies and when it reaches the
     given package amount, it activates the servo packaging function.
     It also sends the count to display.
 */ 
