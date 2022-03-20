@@ -47,8 +47,11 @@ void setup()
 
   
 
-
-//https://www.tinkercad.com/things/bwx3HVeX1Jn
+/*
+	SONAR READ DISTANCE MODULE
+    Source: https://www.tinkercad.com/things/bwx3HVeX1Jn
+    Description: Detects the cookies to increase the counter.
+*/ 
 int sonarReading = 0;	// sonar variables
 int echoPin = 6;
 int triggerPin = 7;
@@ -66,7 +69,14 @@ long readUltrasonicDistance(int triggerPin, int echoPin) // sonar function
   return pulseIn(echoPin, HIGH);
 }
 
-
+/*
+	SERVO MOVEMENT MODULE
+    Source: own
+    Description: Moves the servo to a position 
+    and then returns it to the starting point to
+    simulate the movement of a mechanical arm that
+    packs cookies.
+*/ 
 void takeCookie()
 {
   myservo.write(90); //Moves the servo
@@ -76,7 +86,7 @@ void takeCookie()
 }
 
 /*
-    IR MODULE
+	IR MODULE
     Source: https://www.tinkercad.com/things/0n2VuaSIEZV
     Description: Checks if any IR signal has been sent.
 	If the ON/OFF button is detected the state of the system changes.
@@ -84,7 +94,7 @@ void takeCookie()
 void checkIRSignal()
 {
   if (irrecv.decode(&results)) {		// Receives button code
-      Serial.println(results.value, DEC); // Shows code through terminal
+  	Serial.println(results.value, DEC); // Shows code through terminal
   	if (results.value == 16580863){		// Check if ON/OFF button was pressed
       isEnabled = !isEnabled;			// System state changes
       display(-1);						// Display E for error
@@ -97,7 +107,7 @@ void checkIRSignal()
 }
 
 /*
-    7 SEGMENTS MODULE
+	7 SEGMENTS MODULE
     Source: https://www.tinkercad.com/things/lm0lS38Mq42
     Description: Writes the given segments to the output pins.
 */ 
@@ -115,7 +125,7 @@ void seg7(int a, int b, int c, int d, int e, int f, int g)
 }
 
 /*
-    DISPLAY MODULE
+	DISPLAY MODULE
     Source: https://www.tinkercad.com/things/lm0lS38Mq42
     Description: Translates number to 7 segments and displays it.
     Inspired from source, not copied.
@@ -123,7 +133,7 @@ void seg7(int a, int b, int c, int d, int e, int f, int g)
 void display(int n)
 {
   switch(n){
-    case 0:
+  	case 0:
       seg7(1,1,1,1,1,1,0);
       break;
     case 1:
@@ -161,17 +171,17 @@ void display(int n)
 
 
 /*
-    COUNTER MODULE
+	COUNTER MODULE
     Source: own
     Description: Checks if signal from sonar has detected a cookie.
-    If so, it increases the count of cookies and when it reaches the
+	If so, it increases the count of cookies and when it reaches the
     given package amount, it activates the servo packaging function.
     It also sends the count to display.
 */ 
 void counter()
 {
   if (sonarReading < cookieThreshold){
-    packageCount++;
+  	packageCount++;
     display(packageCount);
     Serial.print("Count: ");
     Serial.println(packageCount);
@@ -183,8 +193,6 @@ void counter()
   }
 }
 
-
-//https://www.tinkercad.com/things/lm0lS38Mq42
 
 void loop()
 {
