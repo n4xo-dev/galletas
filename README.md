@@ -29,7 +29,7 @@ Módulo contador de elementos en cinta transportadora y empaquetador con mando p
 - En caso de emergencia existe un sensor infrarrojo que, junto a un mando, permite parar el funcionamiento del módulo por completo.
 
 ### Diseño del circuito
-![circuito en TinkerCAD](./EmpaquetadorDeGalletas.png)
+![circuito en TinkerCAD](./empaquetadorDeGalletas.png)
 
 ### Referencias:
 - Código sónar: https://www.tinkercad.com/things/61LwgY5m6rw-copy-of-sonarledsservo/editel
