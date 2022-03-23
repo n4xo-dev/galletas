@@ -7,7 +7,7 @@
 Servo myservo;		// servo variables
 int servoPin = 5;
 
-//Letters from "a" to "g" are related to 7-segment
+// Letters from "a" to "g" are related to 7-segment
 int a = 13;
 int b = 12;
 int c = 11;
@@ -29,7 +29,7 @@ const int cookieThreshold = 130;	// Threshold distance to consider a cookie has 
 
 void setup()
 {
-  pinMode(a, OUTPUT); // This stablish the digital outputs...
+  pinMode(a, OUTPUT); 	// This stablish the digital outputs...
   pinMode(b, OUTPUT);
   pinMode(c, OUTPUT);
   pinMode(d, OUTPUT);
@@ -42,10 +42,8 @@ void setup()
   Serial.begin(9600);
   irrecv.enableIRIn();	// Start the receiver
   
-  display(-1);		// System starts at state "disabled"
+  display(-1);			// System starts at state "disabled"
 }
-
-  
 
 /*
 	SONAR READ DISTANCE MODULE
@@ -55,9 +53,9 @@ void setup()
 int sonarReading = 0;	// sonar variables
 int echoPin = 6;
 int triggerPin = 7;
-long readUltrasonicDistance(int triggerPin, int echoPin) // sonar function
+long readUltrasonicDistance(int triggerPin, int echoPin)	// sonar function
 {
-  pinMode(triggerPin, OUTPUT);  // Clear the trigger
+  pinMode(triggerPin, OUTPUT);	// Clear the trigger
   digitalWrite(triggerPin, LOW);
   delayMicroseconds(2);
   // Sets the trigger pin to HIGH state for 10 microseconds
@@ -77,12 +75,11 @@ long readUltrasonicDistance(int triggerPin, int echoPin) // sonar function
     simulate the movement of a mechanical arm that
     packs cookies.
 */ 
-void takeCookie()
+void packageCookies()
 {
-  myservo.write(90); //Moves the servo
+  myservo.write(90);	// Moves the servo
   delay(1000); 
-  myservo.write(0); //Returns servo to starting position
-
+  myservo.write(0);		// Returns servo to starting position
 }
 
 /*
@@ -180,14 +177,14 @@ void display(int n)
 */ 
 void counter()
 {
-  if (sonarReading < cookieThreshold){
-  	packageCount++;
-    display(packageCount);
+  if (sonarReading < cookieThreshold){	// Check if cookie is detected.
+  	packageCount++;						// If so, increase counter.
+    display(packageCount);				// Show counter on 7-segments display
     Serial.print("Count: ");
-    Serial.println(packageCount);
-    if(packageCount >= packageGoal){
-      takeCookie();
-      packageCount = 0;	// Reset count
+    Serial.println(packageCount);		// Print the current number of cookies.
+    if(packageCount >= packageGoal){	// Check if package of cookies is completed.
+      packageCookies();					// If so, move servo
+      packageCount = 0;					// Reset count
       Serial.println("Count has been reset");
     }
   }
