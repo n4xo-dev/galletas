@@ -7,7 +7,7 @@
 
 ## Proyecto
 
-https://www.tinkercad.com/things/bjpvBZTOz1T-tremendous-jaiks/editel?sharecode=Lmx51RjPEbWnjzwnxLLI44py3M7ZouCs81AkVVVfLlI
+https://www.tinkercad.com/things/bjpvBZTOz1T
 
 ## Documento
 
